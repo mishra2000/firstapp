@@ -60,6 +60,7 @@ const Author = () => (
 const Text = (props) => (
   <p>
     Hello, my name is {props.name}, and i am {props.age} years old.
+    {props.children}
   </p>
 );
 function Paragraph() {
@@ -70,6 +71,12 @@ function Paragraph() {
       <Text name="Dhiru" age={22} />
       <Text name="Amrita" age={23} />
       <Text name="Anurag" age={26} />
+      <Text name="children" age={12}>
+        <br />
+        this is children, this name is special, this will not be visible in html
+        but the object props contains me, you need to destructre props to view
+        me.
+      </Text>
     </section>
   );
 }
